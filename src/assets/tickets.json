@@ -1,0 +1,40 @@
+{
+    "Manage_Tickets":[{
+        "image":"/assets/images/photo1.jpg",
+         "name":"James:",
+         "ticketno":"[#23047]",
+         "desc":"Donec rutrum congue leo eget malesuada.",
+         "para":"Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim vivamus.",
+         "schedule1":"Last responded:",
+         "time1":"3 hours ago",
+         "schedule2":"Due in:",
+         "time2":"2 Days",
+         "btnName":"Manage"   
+    },
+    {
+        "image":"/assets/images/photo2.jpg",
+         "name":"Stella:",
+         "ticketno":"[#23135]",
+         "desc":"Curabitur aliquet quam id dui posuere blandit.",
+         "para":"Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl.",
+         "schedule1":"Last responded :",
+         "time1":"3 hours ago",
+         "schedule2":"Due in :",
+         "time2":"2 Days",
+         "btnName":"Manage"   
+    },
+    {
+        "image":"/assets/images/photo3.jpg",
+         "name":"Jhon Doe:",
+         "ticketno":"[#23246]",
+         "desc":"Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.",
+         "para":"Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Lorem ipsum dolor sit amet",
+         "schedule1":"Last responded :",
+         "time1":"3 hours ago",
+         "schedule2":"Due in:",
+         "time2":"2 Days",
+         "btnName":"Manage"   
+    }
+
+    ]
+}

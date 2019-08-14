@@ -12,6 +12,8 @@ export class DashboardComponent implements OnInit {
   LineChart2=[];
   BarChart=[]
   jsonValues;
+  jsonTickets;
+  jsonCard;
   constructor(private jsonService:HttpService) { }
 
   ngOnInit() {
@@ -21,18 +23,19 @@ export class DashboardComponent implements OnInit {
       labels:["2013","2014","2014","2015","2016","2017","2018"],
       datasets:[{
       data:[300,400,300,440,700,550],
-      fill:false,
+      //fill:false,
       lineTension:0.3,
-      borderColor:"gray",
-      backgroundColor:"gray",
-      borderWidth:2.5
+      borderColor:"blue",
+      //backgroundColor:"light-blue",
+
+      borderWidth:1
       },{
         data:[150,200,150,200,320,400],
-        fill:false,
+        //fill:false,
         lineTension:0.3,
-        borderColor:"gray",
-        backgroundColor:"gray",
-        borderWidth:2.5
+        borderColor:"blue",
+        backgroundColor:"#b2b5f3",
+        borderWidth:1
         }]
       },
       options:{
@@ -45,15 +48,12 @@ export class DashboardComponent implements OnInit {
       },
       scales:{
       yAxes:[{
-      gridLines:{
       display:false
-      }
       }],
       xAxes:[{
-      gridLines:{
-      display:false
-      }
-      }]
+          display:false
+      }],
+      
       }
       }
       });
@@ -61,21 +61,21 @@ export class DashboardComponent implements OnInit {
       this.LineChart2=new Chart('lineChart2',{
         type:'line',
         data:{
-        labels:["2007","2014","2014","2015","2016","2017"],
+        labels:["2006","2007","2008","2009","2010","2011"],
         datasets:[{
-        data:[50,75,26,27,74,76],
+        data:[0,75,20,50,100,65],
         fill:false,
         lineTension:0.3,
         borderColor:"gray",
         backgroundColor:"gray",
-        borderWidth:2.5
+        borderWidth:2
         },{
-          data:[150,200,150,200,320,400],
+          data:[50,75,26,27,74,76],
           fill:false,
           lineTension:0.3,
-          borderColor:"gray",
-          backgroundColor:"gray",
-          borderWidth:2.5
+          borderColor:"blue",
+          backgroundColor:"light-blue",
+          borderWidth:2
           }]
         },
         options:{
@@ -84,7 +84,7 @@ export class DashboardComponent implements OnInit {
         display:false
         },
         legend:{
-        display:false
+         display:false
         },
         scales:{
         yAxes:[{
@@ -111,7 +111,7 @@ export class DashboardComponent implements OnInit {
           lineTension:0.3,
           borderColor:"grey",
           backgroundColor:"blue",
-          borderWidth:2.5
+          borderWidth:1
           }]
           },
           options:{
@@ -138,15 +138,30 @@ export class DashboardComponent implements OnInit {
           });
 
         this.getJson();
-
+        this.getJsonTickets();
+        this.getCardDetails();
   }
 
   getJson(){
     this.jsonService.getJsonData().subscribe(data=>{
-      console.log('geting json data..!',data)
+      //console.log('geting json data..!',data)
       this.jsonValues = data.tables_data
-      console.log('geting json data..!',this.jsonValues)
+      //console.log('geting json data..!',this.jsonValues)
 
+    })
+  }
+  getJsonTickets(){
+    this.jsonService.getJsonValue().subscribe(data=>{
+      //console.log('tickets informations..!',data)
+      this.jsonTickets = data.Manage_Tickets
+      //console.log('getting ticket infromations..!',this.jsonTickets)
+    })
+  }
+  getCardDetails(){
+    this.jsonService.getCardValues().subscribe(data=>{
+      console.log('card details..!',data)
+      this.jsonCard = data.Card_Details
+      console.log('getting card details..!',this.jsonCard)
     })
   }
 

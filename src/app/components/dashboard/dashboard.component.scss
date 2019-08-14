@@ -1,3 +1,5 @@
+@import '../../../scss/mixins.scss';
+
 .page-body-wrapper {
     min-height: calc(100vh - 70px);
     background: #eff3f5;
@@ -24,15 +26,9 @@
     flex-wrap: wrap;
     margin-right: -12.5px;
     margin-left: -12.5px;
-
-
-    // display: flex;
-    // flex-wrap: wrap;
-    // margin-right: -12.5px;
-    // margin-left: -12.5px;
 }
 .grid-margin {
-    margin-bottom: 25px;
+    @include grid-margin
 }
 .col-12 {
     flex: 0 0 100%;
@@ -44,6 +40,12 @@
     padding-left: 12.5px;
     
 }
+
+
+
+
+
+
 .card {
     border: 1px solid #d5dcec;
     border-radius: 0px;
@@ -57,6 +59,12 @@
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
 }
+
+
+
+
+
+
 .card-statistics .card-col {
     border-right: 1px solid #d5dcec;
 }
@@ -72,6 +80,7 @@
 .card .card-body {
     padding: 35px 25px;
 }
+
 .card-body{
     flex: 1 1 auto;
 }
@@ -90,10 +99,7 @@ p {
     margin-bottom: 1.125rem;
     text-transform: capitalize;
 }
-// .icons{
-//     height: 30px;
-//     width:30px;
-// }
+
 .stretch-card {
     //display: -webkit-flex;
     display: flex;
@@ -102,9 +108,7 @@ p {
     //-webkit-justify-content: stretch;
     justify-content: stretch;
 }
-.grid-margin {
-    margin-bottom: 25px;
-}
+
 .col-md-4 .col-sm-6{
     position: relative;
     width: 100%;
@@ -201,13 +205,7 @@ h4{
 .mt-5{
     margin-bottom: 5rem;
 }
-// .col-12{
-//     flex: 0 0 100%;
-//     max-width: 100%;
-// } 
-.grid-margin{
-    margin-bottom: 25px;
-}
+
 .table-responsive{
     display: block;
     width: 100%;

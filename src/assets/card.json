@@ -1,0 +1,24 @@
+{
+    "Card_Details":[
+        {
+            "image":"group",
+            "tag_name":"NewUsers",
+            "values":"65,560"
+        },
+        {
+            "image":"check_circle_outline",
+            "tag_name":"NewFeedbacks",
+            "values":"32,604"
+        },
+        {
+            "image":"ac_unit",
+            "tag_name":"Empolyees",
+            "values":"17,583"
+        },
+        {
+            "image":"gps_fixed",
+            "tag_name":"Total Sales",
+            "values":"61,119"
+        }
+    ]
+}
